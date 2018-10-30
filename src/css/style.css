@@ -1,0 +1,196 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.main {
+}
+
+.main-container {
+	width: 900px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 150px;
+	border-radius: 5px 5px 0 0;
+	text-align: center;
+	border: 1px solid #DDD;
+}
+
+.main-container__title {
+	width: 100%;
+	background-color: #000;
+	border-radius: 5px 5px 0 0;
+	color: #fff;
+	font-size: 36px;
+	font-weight: bold;
+	display: inline-block;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	position: relative;
+}
+
+.main-container__add-btn {
+	border: none;
+	background-color: #fff;
+	padding: 10px;
+	font-size: 20px;
+	font-weight: bold;
+	border-radius: 100px;
+	position: absolute;
+	top: 50%;
+	right: 0;
+	transform: translate(-50%, -50%);
+	outline: none;
+	cursor: pointer;
+}
+
+.main-container__list {
+	width: 100%;
+	background-color: #fff;
+	border-bottom: 1px solid #DDD;
+	list-style-type: none;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding: 0;
+}
+
+
+/* Todo item */
+
+.todo {
+	padding-left: 20px;
+	padding-right: 20px;
+	display: flex;
+	align-items: center;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+/* Customize the label (the container) */
+.todo__checkbox {
+  position: relative;
+  cursor: pointer;
+  font-size: 22px;
+  margin-right: 20px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.todo__checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+	position: relative;
+	display: block;
+	border: 2px solid #aaa;
+	height: 30px;
+	width: 30px;
+	background-color: #fff;
+
+}
+
+/* On mouse-over, add a grey background color */
+.todo__checkbox:hover input ~ .checkmark {
+  background-color: #eee;
+}
+
+/* When the checkbox is checked, add a blue background */
+.todo__checkbox input:checked ~ .checkmark {
+  background-color: #fff;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.todo__checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.todo__checkbox .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.todo__title {
+	font-size: 20px;
+}
+
+.todo__buttons {
+	margin-left: auto;
+	display: flex;
+}
+
+.icon {
+	font-style: normal;
+	width: 35px;
+	padding: 6px;
+}
+
+.icon:hover {
+border-radius: 50%;
+background-color: #eee;
+}
+
+.icon__img {
+	width: 100%;
+	cursor: pointer;
+	display: block;
+}
+
+.main-container__add-task{
+	display: none;
+}
+
+.main-container__add-task.active {
+	padding: 20px;
+	display: flex;
+}
+
+.add-task-input {
+	width: 80%;
+	font-size: 20px;
+	padding: 6px;
+}
+
+.add-task-btn {
+	background-color: #fff;
+	border: 1px solid #aaa;
+	padding: 8px 15px;
+	font-size: 20px;
+	outline: none;
+	margin-left: auto;
+	display: flex;
+}
+
+.add-task-btn:hover {
+	background-color: #eee;
+	border: 1px solid #eee;
+	cursor: pointer;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<link href="src/css/style.css" rel="stylesheet">
+</head>
+<body>
+	<div class="main">
+		<div class="main-container">
+			<div class="main-container__title">
+				ToDo List
+				<button class="main-container__add-btn"  id="add-btn">Add task</button>
+			</div>
+			
+			<ul class="main-container__list">
+				<li class="todo">
+					<label class="todo__checkbox">
+						<input type="checkbox" checked="checked">
+						<span class="checkmark"></span>
+					</label>
+
+					<div class="todo__title">
+						Learn JavaScript
+					</div>
+
+
+					<div class="todo__buttons">
+						<i class="icon icon-delete">
+							<img src="src/garbage.svg" class="icon__img">
+						</i>
+					</div>
+				</li>
+
+			</ul> 
+		<div class="main-container__add-task" id="add-task">
+			<input class="add-task-input">
+			<button class="add-task-btn">Add task</button>
+		</div>
+		</div>
+	</div>
+	
+
+	<script src="src/js/script.js"></script>
+</body>
+</html>
