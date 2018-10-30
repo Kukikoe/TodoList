@@ -13,7 +13,7 @@
 				<button class="main-container__add-btn"  id="add-btn">Add task</button>
 			</div>
 			
-			<ul class="main-container__list">
+			<ul class="main-container__list" id="todo-list">
 				<li class="todo">
 					<label class="todo__checkbox">
 						<input type="checkbox" checked="checked">
@@ -35,11 +35,29 @@
 			</ul> 
 		<div class="main-container__add-task" id="add-task">
 			<input class="add-task-input">
-			<button class="add-task-btn">Add task</button>
+			<button class="add-task-btn" id="add-task-btn">Add task</button>
 		</div>
 		</div>
 	</div>
 	
+	<div id="todo-template" style="display: none;">
+		<li class="todo">
+			<label class="todo__checkbox">
+				<input type="checkbox">
+				<span class="checkmark"></span>
+			</label>
+
+			<div class="todo__title">
+
+			</div>
+
+			<div class="todo__buttons">
+				<i class="icon icon-delete">
+					<img src="src/garbage.svg" class="icon__img">
+				</i>
+			</div>
+		</li>
+	</div>
 
 	<script src="src/js/script.js"></script>
 </body>
