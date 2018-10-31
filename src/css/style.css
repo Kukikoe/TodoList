@@ -71,6 +71,11 @@ body {
 	padding-bottom: 20px;
 }
 
+.todo.completed {
+	color: #aaa;
+	text-decoration: line-through;
+}
+
 /* Customize the label (the container) */
 .todo__checkbox {
   position: relative;
