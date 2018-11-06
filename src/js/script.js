@@ -7,7 +7,6 @@ const todoList = document.getElementById("todo-list");
 function init(){
 	let db = openDatabase('mydb', '1.0', 'Test DB', 2 * 1024 * 1024);
 	db.transaction(function (tx) {   
-		//tx.executeSql('DROP TABLE Todos');
 		tx.executeSql('CREATE TABLE IF NOT EXISTS Todos (id unique, title, checked)');   
 	});
 	return db;

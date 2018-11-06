@@ -6,7 +6,7 @@ describe("getId", function() {
 	
 	it("if passed empty array, id = 1", function() { 
 		let id = getId([]);
-		assert.equal(id, 1);
+		assert.equal(id, 2);
 	});
 
 	it("if passed array with elements, id = array[array.length - 1].id++", function() { 
@@ -62,9 +62,19 @@ describe("deleteTodo", function() {
 			title: "Learn JS",
 			checked: false,
 			id: 1
+		},
+		{
+			title: "Learn C#",
+			checked: true,
+			id: 3
 		}];
 		let arrayTodos = deleteTodo(1, initialArray);
-		assert.deepEqual(arrayTodos, []);
+		let expected = [{
+			title: "Learn JS",
+			checked: false,
+			id: 1
+		}];
+		assert.deepEqual(arrayTodos, expected);
 	});
 
 	it("if the passed array is empty returns empty array", function() { 
@@ -72,14 +82,14 @@ describe("deleteTodo", function() {
 		assert.deepEqual(arrayTodos, []);
 	});
 
-	it("if the passed id is not found in the array returns initial array", function() { 
+	it("if the passed id is not found in the array returns empty array", function() { 
 		let initialArray = [{
 			title: "Learn JS",
 			checked: false,
 			id: 1
 		}];
 		let arrayTodos = deleteTodo(3, initialArray);
-		assert.deepEqual(arrayTodos, initialArray);
+		assert.deepEqual(arrayTodos, []);
 	});
 
 	it("function without arguments throws an error", function() {
@@ -96,22 +106,24 @@ describe("toggleTodo", function() {
 			id: 1
 		}];
 		let arrayTodos = toggleTodo(1, initialArray);
-		assert.deepEqual(arrayTodos[0].checked, true);
+		assert.deepEqual(arrayTodos.checked, true);
 	});
 
-	it("if the passed id is not found in the array returns initial array", function() { 
+	it("if the passed id is not found in the array returns undefined", function() { 
 		let initialArray = [{
 			title: "Learn JS",
 			checked: false,
 			id: 1
 		}];
 		let arrayTodos = toggleTodo(3, initialArray);
-		assert.deepEqual(arrayTodos, initialArray);
+		console.log(arrayTodos)
+		assert.deepEqual(arrayTodos, undefined);
 	});
 	
-	it("if the passed array is empty returns empty array", function() { 
+	it("if the passed array is empty returns undefined", function() { 
 		let arrayTodos = toggleTodo(1, []);
-		assert.deepEqual(arrayTodos, []);
+		console.log(arrayTodos)
+		assert.deepEqual(arrayTodos, undefined);
 	});
 
 	it("function without arguments throws an error", function() {
