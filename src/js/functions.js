@@ -1,4 +1,4 @@
-let _id = 0;
+let _id = 1;
 
 function getId(arrayTodos) {
 	if (arrayTodos && arrayTodos.length) {
@@ -23,11 +23,11 @@ function toggleTodo(id, arrayTodos) {
 		}
 		return todo;
 	});
-	return arrayTodos;
+	return arrayTodos.filter((todo) => todo.id === parseInt(id));
 }
 
 function deleteTodo(id, arrayTodos) {
-	return arrayTodos.filter((todo) => todo.id !== parseInt(id));
+	return arrayTodos.filter((todo) => todo.id === parseInt(id));
 }
 
 module.exports = {

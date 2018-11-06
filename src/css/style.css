@@ -147,18 +147,30 @@ body {
 	font-size: 20px;
 }
 
-.todo__buttons {
+.btns {
 	margin-left: auto;
 	display: flex;
 }
 
-.icon {
+.todo__button {
+	display: flex;
 	font-style: normal;
 	width: 35px;
+	height: 35px;
 	padding: 6px;
 }
 
-.icon:hover {
+.todo__button.update {
+margin-right: 10px;
+}
+
+/* .icon {
+	font-style: normal;
+	width: 35px;
+	padding: 6px;
+} */
+
+.todo__button:hover {
 border-radius: 50%;
 background-color: #eee;
 }
