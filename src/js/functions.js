@@ -9,21 +9,23 @@ function getId(arrayTodos) {
 
 function addTodo(id, title, arrayTodos) {
 	let todo = {
+		id,
 		title,
-		checked: false,
-		id
+		checked: false
 	};
 	return arrayTodos.concat(todo);
 }	
 
 function toggleTodo(id, arrayTodos) {
+	let obj;
 	arrayTodos = arrayTodos.map((todo) => {
 		if (+id == todo.id) {
 			todo.checked = !todo.checked;
+			obj = todo;
 		}
 		return todo;
 	});
-	return arrayTodos.filter((todo) => todo.id === parseInt(id));
+	return obj;
 }
 
 function deleteTodo(id, arrayTodos) {

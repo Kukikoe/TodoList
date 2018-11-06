@@ -65,15 +65,26 @@ body {
 .todo {
 	padding-left: 20px;
 	padding-right: 20px;
-	display: flex;
-	align-items: center;
 	padding-top: 20px;
 	padding-bottom: 20px;
 }
 
-.todo.completed {
+.todo.completed .todo__title {
 	color: #aaa;
 	text-decoration: line-through;
+}
+
+.todo.editing .todo__edit {
+display: flex;
+}
+
+.todo.editing .todo__info {
+display: none;
+}
+
+.todo__info {
+	display: flex;
+	align-items: center;
 }
 
 /* Customize the label (the container) */
@@ -181,7 +192,7 @@ background-color: #eee;
 	display: block;
 }
 
-.main-container__add-task{
+.main-container__add-task, .todo__edit {
 	display: none;
 }
 
@@ -190,13 +201,13 @@ background-color: #eee;
 	display: flex;
 }
 
-.add-task-input {
+.add-task-input, .update-task {
 	width: 80%;
 	font-size: 20px;
 	padding: 6px;
 }
 
-.add-task-btn {
+.add-task-btn, .btn-update {
 	background-color: #fff;
 	border: 1px solid #aaa;
 	padding: 8px 15px;
@@ -206,7 +217,8 @@ background-color: #eee;
 	display: flex;
 }
 
-.add-task-btn:hover {
+.add-task-btn:hover,
+.btn-update:hover {
 	background-color: #eee;
 	border: 1px solid #eee;
 	cursor: pointer;

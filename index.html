@@ -20,29 +20,40 @@
 			<input class="add-task-input">
 			<button class="add-task-btn" id="add-task-btn">Add task</button>
 		</div>
+
+
 		</div>
 	</div>
-	
+
 	<div id="todo-template" style="display: none;">
+
 		<li class="todo" id="todo-3" data-id="3">
-			<label class="todo__checkbox">
-				<input type="checkbox" class="todo__checkbox-input">
-				<span class="checkmark"></span>
-			</label>
-
-			<div class="todo__title">
-
-			</div>
-			<div class="btns">
-			<div class="todo__button update">
-				<img src="src/img/pen.svg" class="icon__img">
+			<div class="todo__edit">
+				<input class="update-task">
+				<button class="btn-update">Update</button>
 			</div>
 
-			<div class="todo__button delete">
-				<img src="src/img/garbage.svg" class="icon__img">
-			</div>
-		</li>
-	</div>
+			<div class="todo__info">
+				<label class="todo__checkbox">
+					<input type="checkbox" class="todo__checkbox-input">
+					<span class="checkmark"></span>
+				</label>
+
+				<div class="todo__title">
+
+				</div>
+				<div class="btns">
+					<div class="todo__button update">
+						<img src="src/img/pen.svg" class="icon__img">
+					</div>
+
+					<div class="todo__button delete">
+						<img src="src/img/garbage.svg" class="icon__img">
+					</div>
+				</div>
+			</li>
+		</div>
+
 	</div>
 
 	<script src="src/js/script.js"></script>
